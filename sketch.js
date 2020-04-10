@@ -4,9 +4,20 @@ let everything = "";
 
 var x = [];
 
-document.getElementById("abc").onchange = function() {
-  [...x, x.push(document.getElementById("abc").value)];
-  draw();
+function checkType(val) {
+  if (val == parseInt(val)) return true;
+  else return false;
+}
+
+document.getElementById("num").onchange = function() {
+  if (checkType(document.getElementById("num").value)) {
+    [...x, x.push(document.getElementById("num").value)];
+    var temp = document.getElementById("num").value;
+    console.log(parseInt(temp, 10));
+    draw();
+  } else {
+    alert("Please Enter a valid Integer");
+  }
 };
 
 function setup() {
