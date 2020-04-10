@@ -5,19 +5,21 @@ let everything = "";
 var x = [];
 
 function checkType(val) {
-  if (val == parseInt(val)) return true;
+  if (val == parseInt(val) || val.match(/^[A-Za-z]+$/)) return true;
   else return false;
 }
 
-document.getElementById("num").onchange = function() {
-  if (checkType(document.getElementById("num").value)) {
-    [...x, x.push(document.getElementById("num").value)];
-    var temp = document.getElementById("num").value;
+document.getElementById("add").onclick = function() {
+  var temp = document.getElementById("num").value;
+  if (checkType(temp)) {
+    [...x, x.push(temp)];
     console.log(parseInt(temp, 10));
     draw();
   } else {
     alert("Please Enter a valid Integer");
   }
+  document.getElementById("num").value = "";
+  document.getElementById("num").focus();
 };
 
 function setup() {
