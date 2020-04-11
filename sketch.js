@@ -9,19 +9,6 @@ function checkType(val) {
   else return false;
 }
 
-document.getElementById("add").onclick = function() {
-  var temp = document.getElementById("num").value;
-  if (checkType(temp)) {
-    [...x, x.push(temp)];
-    console.log(parseInt(temp, 10));
-    draw();
-  } else {
-    alert("Please Enter a valid Integer");
-  }
-  document.getElementById("num").value = "";
-  document.getElementById("num").focus();
-};
-
 function setup() {
   display = createP("STARTING");
   display.class("results");
