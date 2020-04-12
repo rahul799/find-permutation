@@ -11,6 +11,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <meta charset="utf-8" />
     <style>
+      p {
+        text-align: center;
+      }
+      span {
+        opacity: 0;
+        transition: all 0.4s ease;
+      }
+
+      span.fade {
+        opacity: 1;
+      }
+
       .results {
         font-family: "Courier";
         text-align: center;
@@ -46,8 +58,10 @@
       <input id="num" placeholder="Enter a digit or Alphabet" />
       <button class="btn btn-primary ml-2" type="button" id="add">Add</button>
     </div>
+    <p class="abc"></p>
     <script src="sketch.js"></script>
     <script src="events.js"></script>
+    <script src="animation.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

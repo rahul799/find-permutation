@@ -23,6 +23,7 @@ function draw() {
   arr1 = new permute(sample);
   var temp = arr1.permuteUnique();
   console.log(temp);
+
   for (let i = 0; i < temp.length; i++) {
     everything += temp[i] + "<br>";
   }
