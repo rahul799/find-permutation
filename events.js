@@ -14,7 +14,6 @@ document.getElementById("add").onclick = function() {
   var temp = document.getElementById("num").value;
   if (checkType(temp)) {
     [...x, x.push(temp)];
-    console.log(parseInt(temp, 10));
     draw();
   } else {
     alert("Please Enter a valid Integer");
