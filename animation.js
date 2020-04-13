@@ -1,24 +1,37 @@
-const text = document.querySelector(".abc");
-arr2 = new permute([1, 2, 3, 4, 5]);
-var temp = arr2.permuteUnique();
+var y = [];
+var raw = [1, 2];
+animate();
 
-for (let i = 0; i < temp.length; i++) {
-  text.innerHTML += "<span>" + temp[i] + "<br>" + "</span>";
-}
+function animate() {
+  const text = document.querySelector(".permute");
 
-let char = 0;
-let timer = setInterval(onTick, 50);
-
-function onTick() {
-  const span = text.querySelectorAll("span")[char];
-  span.classList.add("fade");
-  char++;
-  if (char === temp.length) {
-    complete();
-    return;
+  if (y.length != 0) {
+    raw = y;
+    text.innerHTML = "";
   }
-}
 
-function complete() {
-  clearInterval(timer);
+  arr1 = new permute(raw);
+
+  var temp = arr1.permuteUnique();
+
+  for (let i = 0; i < temp.length; i++) {
+    text.innerHTML += "<span>" + temp[i] + "<br>" + "</span>";
+  }
+
+  let char = 0;
+  let timer = setInterval(onTick, 50);
+
+  function onTick() {
+    const span = text.querySelectorAll("span")[char];
+    span.classList.add("fade");
+    char++;
+    if (char === temp.length) {
+      complete();
+      return;
+    }
+  }
+
+  function complete() {
+    clearInterval(timer);
+  }
 }

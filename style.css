@@ -2,11 +2,11 @@ p {
   text-align: center;
 }
 span {
-  opacity: 1;
+  opacity: 0 !important;
   transition: all 0.4s ease;
 }
 
-span.fade {
+span.remove_fade {
   opacity: 1;
 }
 

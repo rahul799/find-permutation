@@ -13,8 +13,10 @@ input.addEventListener("keyup", function(event) {
 document.getElementById("add").onclick = function() {
   var temp = document.getElementById("num").value;
   if (checkType(temp)) {
-    [...x, x.push(temp)];
-    draw();
+    // [...x, x.push(temp)];
+    [...y, y.push(temp)];
+    animate();
+    // draw();
   } else {
     alert("Please Enter a valid Integer");
   }

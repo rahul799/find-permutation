@@ -1,36 +1,36 @@
-let display = "";
+// let display = "";
 
-let everything = "";
+// let everything = "";
 
-var x = [];
+// var x = [];
 
 function checkType(val) {
   if (val == parseInt(val) || val.match(/^[A-Za-z]+$/)) return true;
   else return false;
 }
 
-function setup() {
-  display = createP("STARTING");
-  display.class("results");
-}
+// function setup() {
+//   display = createP("STARTING");
+//   display.class("results");
+// }
 
-function draw() {
-  var sample = [1, 2, 3];
-  if (x.length != 0) {
-    sample = x;
-    everything = "";
-  }
-  arr1 = new permute(sample);
-  var temp = arr1.permuteUnique();
-  console.log(temp);
+// function draw() {
+//   var sample = [1, 2, 3];
+//   if (x.length != 0) {
+//     sample = x;
+//     everything = "";
+//   }
+//   arr1 = new permute(sample);
+//   var temp = arr1.permuteUnique();
+//   console.log(temp);
 
-  for (let i = 0; i < temp.length; i++) {
-    everything += temp[i] + "<br>";
-  }
-  textFont("Courier");
-  display.html(everything);
-  noLoop();
-}
+//   for (let i = 0; i < temp.length; i++) {
+//     everything += temp[i] + "<br>";
+//   }
+//   textFont("Courier");
+//   display.html(everything);
+//   noLoop();
+// }
 
 class permute {
   constructor(num) {
