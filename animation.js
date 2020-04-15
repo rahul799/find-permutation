@@ -15,15 +15,19 @@ function animate() {
   var temp = arr1.permuteUnique();
 
   for (let i = 0; i < temp.length; i++) {
-    text.innerHTML += "<span>" + temp[i] + "<br>" + "</span>";
+    text.innerHTML += "<div class='random'>";
+    for (let j = 0; j < temp[i].length; j++) {
+      text.innerHTML += "<span>" + temp[i][j] + "</span>";
+    }
+    text.innerHTML += "<br>" + "</div>";
   }
 
   let char = 0;
   let timer = setInterval(onTick, 50);
 
   function onTick() {
-    const span = text.querySelectorAll("span")[char];
-    span.classList.add("fade");
+    const div = text.querySelectorAll(".random")[char];
+    div.classList.add("fade");
     char++;
     if (char === temp.length) {
       complete();
